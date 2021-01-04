@@ -202,7 +202,7 @@ class VirtualServer(XmlObject):
         self.VirtualServerIPAddress = ''
         self.VirtualServerProtocol = ''
 
-        if isinstance(config, basestring):
+        if isinstance(config, str):
             self.parseXML(config)
         else:
             name = self._get_param(config, 'name')
@@ -503,7 +503,7 @@ class StaticHost(XmlObject):
         self.HostHw = ''
         self.HostIp = ''
         self.HostEnabled = 1
-        if isinstance(config, basestring):
+        if isinstance(config, str):
             self.parseXML(config)
         else:
             mac = self._get_param(config, self.P_MAC_ADDRESS)
